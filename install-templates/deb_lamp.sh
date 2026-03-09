@@ -22,8 +22,6 @@ info "Starting LAMP installation on Ubuntu 24.04..."
 echo ""
 
 # ── MariaDB root password ─────────────────────────────────────────────────────
-# Accept from environment variable (non-interactive/SSH mode) OR prompt if
-# running in a real terminal. Fails fast if neither provides a value.
 if [[ -n "${DB_ROOT_PASS:-}" ]]; then
     info "Using DB_ROOT_PASS from environment."
 elif [[ -t 0 ]]; then
